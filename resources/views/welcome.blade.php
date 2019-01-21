@@ -1,39 +1,64 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <title>Levelo - {{ __('Plan your dream bike build') }}</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-        </style>
-    </head>
-    <body>
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            margin: 0;
+        }
 
-    @auth
-        <a href="{{ url('/home') }}">Home</a>
-    @else
-        <a href="{{ route('login') }}">Login</a>
+        #app {
+            height: 100vh;
+        }
 
-        @if (Route::has('register'))
-            <a href="{{ route('register') }}">Register</a>
-        @endif
-    @endauth
+        #app nav ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #app nav ul li {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <ul>
+                @auth
+                    <li>
+                        <a href="{{ url('/home') }}">Home</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('login') }}">Login</a>
+                    </li>
 
-    <h1>Levelo</h1>
+                    @if (Route::has('register'))
+                        <li>
+                            <a href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endif
+                @endauth
+            </ul>
+        </nav>
 
-    </body>
+        <main>
+            <h1>Levelo</h1>
+            <p>{{ __('Plan your dream bike build') }}</p>
+        </main>
+    </div>
+</body>
 </html>

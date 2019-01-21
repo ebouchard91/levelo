@@ -5,7 +5,23 @@
 // Variables
 @import 'variables';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    margin: 0;
+}
+
+#app {
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+            }
+        }
+    }
 }
