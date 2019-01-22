@@ -15,7 +15,12 @@ class CreateRatesTable extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('build_id');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('build_id')->references('id')->on('builds');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
