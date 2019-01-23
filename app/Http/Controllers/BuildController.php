@@ -14,7 +14,7 @@ class BuildController extends Controller
      */
     public function index()
     {
-        //
+        return view('builds.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class BuildController extends Controller
      */
     public function create()
     {
-        //
+        return view('builds.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class BuildController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect('builds');
     }
 
     /**
@@ -46,7 +46,7 @@ class BuildController extends Controller
      */
     public function show(Build $build)
     {
-        //
+        return view('builds.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class BuildController extends Controller
      */
     public function edit(Build $build)
     {
-        //
+        return view('builds.edit');
     }
 
     /**
@@ -69,7 +69,7 @@ class BuildController extends Controller
      */
     public function update(Request $request, Build $build)
     {
-        //
+        return redirect('builds');
     }
 
     /**
@@ -80,6 +80,6 @@ class BuildController extends Controller
      */
     public function destroy(Build $build)
     {
-        //
+        return redirect('builds');
     }
 }

@@ -14,7 +14,7 @@ class ElementController extends Controller
      */
     public function index()
     {
-        //
+        return view('elements.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ElementController extends Controller
      */
     public function create()
     {
-        //
+        return view('elements.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class ElementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect('elements');
     }
 
     /**
@@ -46,7 +46,7 @@ class ElementController extends Controller
      */
     public function show(Build $build)
     {
-        //
+        return view('elements.show');
     }
 
     /**
@@ -57,7 +57,7 @@ class ElementController extends Controller
      */
     public function edit(Build $build)
     {
-        //
+        return view('elements.edit');
     }
 
     /**
@@ -69,7 +69,7 @@ class ElementController extends Controller
      */
     public function update(Request $request, Build $build)
     {
-        //
+        return redirect('elements');
     }
 
     /**
@@ -80,6 +80,6 @@ class ElementController extends Controller
      */
     public function destroy(Build $build)
     {
-        //
+        return redirect('elements');
     }
 }
