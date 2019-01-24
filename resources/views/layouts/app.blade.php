@@ -24,9 +24,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
                 </li>
                 <!-- Authentication Links -->
                 @guest
@@ -41,9 +39,7 @@
                 @else
                     <li>{{ Auth::user()->name }}</li>
                     <li>
-                        <a href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 

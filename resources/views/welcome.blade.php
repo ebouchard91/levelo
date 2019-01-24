@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Levelo - {{ __('Plan your dream bike build') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} - {{ __('Plan your dream bike build') }}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -39,16 +39,16 @@
             <ul>
                 @auth
                     <li>
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">__('Home')</a>
                     </li>
                 @else
                     <li>
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">__('Login')</a>
                     </li>
 
                     @if (Route::has('register'))
                         <li>
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">__('Register')</a>
                         </li>
                     @endif
                 @endauth
@@ -56,7 +56,7 @@
         </nav>
 
         <main>
-            <h1>Levelo</h1>
+            <h1>{{ config('app.name', 'Laravel') }}</h1>
             <p>{{ __('Plan your dream bike build') }}</p>
         </main>
     </div>
