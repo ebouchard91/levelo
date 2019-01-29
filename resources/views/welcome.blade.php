@@ -37,9 +37,12 @@
     <div id="app">
         <nav>
             <ul>
+                <li>
+                    <a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
+                </li>
                 @auth
                     <li>
-                        <a href="{{ url('/home') }}">{{ __('Home') }}</a>
+                        <a href="{{ url('/builds') }}">{{ __('Builds') }}</a>
                     </li>
                 @else
                     <li>

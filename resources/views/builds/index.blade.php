@@ -8,4 +8,8 @@
     <p>{{ session('status') }}</p>
 @endif
 
+@foreach ($builds as $build)
+    <p>This is user {{ $build->id }}</p>
+@endforeach
+
 @endsection

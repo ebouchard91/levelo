@@ -14,7 +14,8 @@ class BuildController extends Controller
      */
     public function index()
     {
-        return view('builds.index');
+        $builds = Build::all();
+        return view('builds.index', ['builds' => $builds]);
     }
 
     /**
